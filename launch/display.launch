@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find IWAMP_URDF_151021.SLDASM)/robots/IWAMP_URDF_151021.SLDASM.URDF" />
+    textfile="$(find Crawler_URDF_V2)/robots/Crawler_URDF_V2.URDF" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +22,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find IWAMP_URDF_151021.SLDASM)/urdf.rviz" />
+    args="-d $(find Crawler_URDF_V2)/urdf.rviz" />
 </launch>
