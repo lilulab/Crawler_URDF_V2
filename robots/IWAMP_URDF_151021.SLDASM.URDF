@@ -1,0 +1,544 @@
+<robot
+  name="IWAMP_URDF_151021.SLDASM">
+  <link
+    name="chasis_link">
+    <inertial>
+      <origin
+        xyz="8.84549564303887E-19 -0.0718108193337467 0.0622831434710217"
+        rpy="0 0 0" />
+      <mass
+        value="9.63949891888311" />
+      <inertia
+        ixx="0.175105655940575"
+        ixy="-8.40221032148051E-17"
+        ixz="-8.7505359713904E-18"
+        iyy="0.12516602042126"
+        iyz="-0.00427488292650829"
+        izz="0.280074215069266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/chasis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/chasis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="trans_base_link">
+    <inertial>
+      <origin
+        xyz="-1.25947262695791E-17 0.0111493414862326 0.0312014794506156"
+        rpy="0 0 0" />
+      <mass
+        value="1.52634919066965" />
+      <inertia
+        ixx="0.00515878833887719"
+        ixy="-1.7213389792638E-18"
+        ixz="2.39125865362686E-18"
+        iyy="0.00547975843460313"
+        iyz="-0.000384362169845534"
+        izz="0.0100724945573142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/trans_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/trans_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="trans_base_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="trans_base_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_yaw_link">
+    <inertial>
+      <origin
+        xyz="-0.00212537608285478 -0.000611402181059748 0.0322390695229115"
+        rpy="0 0 0" />
+      <mass
+        value="0.361799671756217" />
+      <inertia
+        ixx="0.000327814456834869"
+        ixy="4.79453753360913E-06"
+        ixz="2.68851639585549E-05"
+        iyy="0.000349984731920422"
+        iyz="-4.70523012181893E-06"
+        izz="0.000437706123674794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0895 0.035016"
+      rpy="0 0 0" />
+    <parent
+      link="trans_base_link" />
+    <child
+      link="arm_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.058957667264048 -0.14005721103525 0.0019553069389836"
+        rpy="0 0 0" />
+      <mass
+        value="1.85488275899258" />
+      <inertia
+        ixx="0.0257712444565225"
+        ixy="-0.000439691693175265"
+        ixz="2.12917262387439E-05"
+        iyy="0.00392606737781297"
+        iyz="-6.57668892492239E-05"
+        izz="0.0223656996218578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0015 0 0.043"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="arm_yaw_link" />
+    <child
+      link="arm_pitch_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_prismatic_link">
+    <inertial>
+      <origin
+        xyz="0.00101633881757432 -0.17912571490332 4.23937646206712E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.110019786871871" />
+      <inertia
+        ixx="0.00126342890038883"
+        ixy="-1.38410348401849E-06"
+        ixz="-2.10689989753812E-16"
+        iyy="7.23043976475078E-06"
+        iyz="2.98083693793535E-15"
+        izz="0.00126085275676098" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_prismatic_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/arm_prismatic_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_prismatic_joint"
+    type="prismatic">
+    <origin
+      xyz="0.063769 0.09977 -0.0015"
+      rpy="-4.1085E-48 -6.1428E-48 2.5238E-95" />
+    <parent
+      link="arm_pitch_link" />
+    <child
+      link="arm_prismatic_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wrist_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.000157908793528061 0.00647785036964442 -1.07871939140088E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00528345401160869" />
+      <inertia
+        ixx="3.41063336130692E-07"
+        ixy="-5.19121917890607E-09"
+        ixz="4.11871201547351E-15"
+        iyy="2.6130680101728E-07"
+        iyz="5.33770867276759E-15"
+        izz="3.71822826705573E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/wrist_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/wrist_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-3.6047E-16 1.8276E-16 0.7854" />
+    <parent
+      link="arm_prismatic_link" />
+    <child
+      link="wrist_pitch_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wrist_row_link">
+    <inertial>
+      <origin
+        xyz="-8.39262507867758E-13 0.0606398181780271 -0.0146123429229879"
+        rpy="0 0 0" />
+      <mass
+        value="0.998352787983995" />
+      <inertia
+        ixx="0.00175421545173074"
+        ixy="-3.45356504699384E-14"
+        ixz="2.25884740083236E-11"
+        iyy="0.00164371838415454"
+        iyz="-3.45497110087724E-05"
+        izz="0.00156876934052778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/wrist_row_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/wrist_row_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_row_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0127 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="wrist_pitch_link" />
+    <child
+      link="wrist_row_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="tool_link">
+    <inertial>
+      <origin
+        xyz="-7.91465715362353E-13 -0.0166761289891899 0.0782580600328449"
+        rpy="0 0 0" />
+      <mass
+        value="0.999157186107062" />
+      <inertia
+        ixx="0.00175794457946145"
+        ixy="2.25883697304288E-11"
+        ixz="3.44062963742904E-14"
+        iyy="0.00157227459030867"
+        iyz="3.36695904433802E-05"
+        izz="0.00164394631652227" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/tool_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/tool_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tool_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.13895 0.0020772"
+      rpy="1.5708 5.0343E-13 6.3761E-13" />
+    <parent
+      link="wrist_row_link" />
+    <child
+      link="tool_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cmass_left_link">
+    <inertial>
+      <origin
+        xyz="-0.168 -0.00377643867018349 0.0655"
+        rpy="0 0 0" />
+      <mass
+        value="0.544396872641284" />
+      <inertia
+        ixx="0.0096631158782445"
+        ixy="-1.32763346699882E-17"
+        ixz="-5.70383169818937E-20"
+        iyy="0.000448883258665965"
+        iyz="1.60005972270784E-18"
+        izz="0.00922729814452209" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/cmass_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/cmass_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cmass_left_joint"
+    type="prismatic">
+    <origin
+      xyz="0.002 0 -0.015"
+      rpy="0 0 0" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="cmass_left_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cmass_right_link">
+    <inertial>
+      <origin
+        xyz="0.168 -0.00377643867018358 0.0655000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.544396872641284" />
+      <inertia
+        ixx="0.00966311587824451"
+        ixy="1.26219376965671E-17"
+        ixz="-7.2733229009762E-20"
+        iyy="0.000448883258665913"
+        iyz="7.35473736851508E-19"
+        izz="0.00922729814452204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/cmass_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://IWAMP_URDF_151021.SLDASM/meshes/cmass_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cmass_right_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.002 0 -0.015"
+      rpy="0 0 0" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="cmass_right_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
